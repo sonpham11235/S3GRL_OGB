@@ -392,7 +392,7 @@ class SGRLDynamicDataset(Dataset):
         return data
 
 
-@profileit()
+@profileit("cuda")
 def profile_train(model, train_loader, optimizer, device, emb, train_dataset, args):
     # normal training with BCE logit loss with profiling enabled
     model.train()
